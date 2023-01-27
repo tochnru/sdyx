@@ -1,0 +1,126 @@
+.footer{
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   grid-column: 1;
+   grid-row: 3;
+   background-color: #313741;
+   width: 100%;
+   border-radius: 50px;
+   padding: 30px 60px;
+   &__title{
+      color: white;
+      font-size: 22px;
+      margin-bottom: 5px;
+   }
+   &__type{
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #a5a5a5;
+      &-span{
+         color: $colorGreen;
+         font-size: 16px;
+      }
+   }
+   &__box{
+      display: flex;
+   }
+   &__link{
+      text-decoration: none;
+      width: 240px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      border-radius: 30px;
+      font-size: 20px;
+      &:not(:last-child){
+         margin-right: 20px;
+      }
+      &-rsa{
+         background-color: $colorGreen;
+         color: #171b25;
+         &:hover{
+            background-color: #7d51fb;
+            color: white;
+         }
+      }
+      &-aes{
+         border: 1px solid white;
+         color: white;
+         &:hover{
+            background-color: #ffffff;
+            color: $colorBlack;
+         }
+      }
+   }
+}
+
+@media screen and (max-width:1440px){}
+@media screen and (max-width:1232px){
+   .footer{
+      margin: 0;
+      width: 86%;
+   }
+}
+@media screen and (max-width:1024px){
+   .footer{
+      flex-direction: column;
+      &__title{
+         text-align: center;
+         font-size: 20px;
+      }
+      &__box-type{
+         display: flex;
+         margin-bottom: 10px;
+      }
+      &__type:not(:last-child){
+         margin-right: 10px;
+      }
+      &__link{
+         height: 50px;
+         width: 180px;
+         font-size: 18px;
+      }
+   }
+}
+@media screen and (max-width:896px){
+   .footer{
+      padding: 20px 60px;
+   }
+}
+@media screen and (max-width:768px){
+.footer{
+   &__box-type{
+      display: none;
+   }
+   &__title{
+      margin-bottom: 20px;
+   }
+}
+}
+@media screen and (max-width:624px){
+   .footer{
+      width: 100%;
+   }
+}
+@media screen and (max-width:480px){
+   .footer{
+      padding: 20px 30px;
+      &__link{
+         width: 136px;
+      }
+   }
+}
+@media screen and (max-width:400px){
+   .footer{
+      border-radius: 40px;
+      &__link{
+         width: 100px;
+      }
+   }
+
+}
+@media screen and (max-width:360px){}
